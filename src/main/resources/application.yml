@@ -1,0 +1,43 @@
+server :
+  port : 9090
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      enabled: true
+      show-details: always
+  server:
+    port: 8080
+
+logging:
+
+  level:
+    root: INFO
+    sm-controller: INFO
+    sm-repository: INFO
+    sm: DEBUG
+
+  group:
+    spring: "org.springframework"
+    sm-repository: "com.sm.repo"
+    sm-controller: "com.sm.controller"
+    sm: "com.sm"
+
+
+
+#actuator info endpoint static information
+info:
+  application:
+    name : Springboot-Actuator
+    Description : Spring Boot Actuator 2.x Enhancement
+    artifact : Actuator-Sample
+    version : 0.0.1-SNAPSHOT
+  technology-stack:
+    java : Open Jdk 8
+    spring boot : 2.4.2
+    angular : 10
+    database : MongoDB
